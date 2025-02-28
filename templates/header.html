@@ -1,0 +1,21 @@
+{% load static %}
+
+{% block extra_css %}
+<style>
+    a {
+        text-decoration: none !important;
+    }
+</style>
+{% endblock extra_css %}
+
+{% block header %}
+<nav class="navbar navbar-expand-lg shadow" style="background-color: #A00000;"> 
+    <div class="container">
+            <a href="{% url 'landing_page' %}" class="d-flex align-items-center">
+                <span><img src="{% static 'images/logo/af-logo_white_outline.png' %}" height="50px" width="50px" alt=""></span>
+                <span><h2 class="text-light">Anaconrelo's Movie Web</h2></span>
+            </a>
+        <a href="{% url 'uploads' %}" class="btn btn-danger">Upload</a>
+    </div>
+</nav>
+{% endblock header %}

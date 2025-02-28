@@ -13,9 +13,9 @@ class MovieForm(forms.ModelForm):
             'image': 'Gambar',
         }
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'description': forms.Textarea(attrs={'class': 'form-control'}),
-            'movie': forms.FileInput(attrs={'class': 'form-control'}),
-            'image': forms.FileInput(attrs={'class': 'form-control'}),
+            'title': forms.TextInput(attrs={'class': 'form-control', 'required': True}),
+            'description': forms.Textarea(attrs={'class': 'form-control', 'required': True}),
+            'movie': forms.FileInput(attrs={'class': 'form-control', 'required': True}),
+            'image': forms.FileInput(attrs={'class': 'form-control', 'required': True}),
         }
     

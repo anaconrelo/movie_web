@@ -10,7 +10,7 @@ def validate_extension_movie(value):
     
 def validate_extension_image(value):
     ext = os.path.splitext(value.name)[1]  # [0] returns path+filename
-    valid_extensions = ['.PNG', '.JPG', '.JPEG', '.GIF']
+    valid_extensions = ['.PNG', '.JPG', '.JPEG', '.GIF', '.png']
     if not ext.lower() in valid_extensions:
         raise ValidationError('Hanya fail MP4 sahaja.')
     

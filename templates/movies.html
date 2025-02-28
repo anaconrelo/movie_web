@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid py-5">
+    <div class="table-container">
+        <table class="table table-hover table-sm table-striped table-danger">
+            <thead>
+                <tr>
+                    <th>NO.</th>
+                    <th>TITLE</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for movie in movies %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ movie.title }}</td>
+                    <td>{{ movie.description }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock content %}
