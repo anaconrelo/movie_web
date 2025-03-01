@@ -7,6 +7,10 @@ def is_ajax(request):
     return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
 @never_cache
 def landing_page(request):
+    return redirect('movies')
+
+@never_cache
+def movies(request):
     movies = Movie.objects.all().order_by('-id')
     context = {
         'heading': 'Anaconrelo Movie Web',
