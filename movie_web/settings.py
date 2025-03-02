@@ -50,6 +50,8 @@ ROOT_URLCONF = 'movie_web.urls'
 #CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     "http://192.168.0.223",
+    "https://movie.anaconrelo.com",
+    "http://movie.anaconrelo.com",
 ]
 
 CORS_ALLOW_HEADERS = [
