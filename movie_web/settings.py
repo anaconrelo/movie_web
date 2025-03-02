@@ -48,7 +48,18 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'movie_web.urls'
 CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:53711",  # Flutter Web running locally
+    "https://your-flutter-web.com",  # Production URL
+]
 
+CORS_ALLOW_HEADERS = [
+    "authorization",
+    "content-type",
+    "x-requested-with",
+    "range",  # ✅ Needed for video streaming
+]
+CORS_EXPOSE_HEADERS = ["Content-Length", "Content-Range"]
 
 TEMPLATES = [
     {
